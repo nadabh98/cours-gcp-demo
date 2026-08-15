@@ -14,5 +14,5 @@ def sante():
 @app.get("/etudiants")
 def liste_etudiants():
  with engine.connect() as conn:
- resultat = conn.execute(text("SELECT NOW()"))
+    resultat = conn.execute(text("SELECT NOW()"))
  return {"heure_serveur": str(resultat.scalar())}
